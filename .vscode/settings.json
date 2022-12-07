@@ -29,7 +29,7 @@
     "**/.vscode",
     "**/.vscode/**"
   ],
-  "C_Cpp.errorSquiggles": "Disabled",
+  "C_Cpp.errorSquiggles": "disabled",
   "files.associations": {
     "stdexcept": "cpp"
   }
