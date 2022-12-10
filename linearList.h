@@ -1,3 +1,4 @@
+#include <iostream>
 using namespace std;
 
 class linearList
@@ -20,17 +21,17 @@ public:
     ~linearList();
 };
 
-int linearList::Length()
+inline int linearList::Length()
 {
     return length;
 }
 
-int linearList::MaxLength()
+inline int linearList::MaxLength()
 {
     return maxlength;
 }
 
-int linearList::LocateElem(int e)
+inline int linearList::LocateElem(int e)
 {
     for (int i = 0; i < length; i++)
     {
@@ -43,7 +44,7 @@ int linearList::LocateElem(int e)
     return -1;
 }
 
-int linearList::GetElem(int i)
+inline int linearList::GetElem(int i)
 {
     if (i < 1 && i > length)
     {
@@ -53,7 +54,7 @@ int linearList::GetElem(int i)
     return arry[i - 1];
 }
 
-bool linearList::ListInsert(int i, int e)
+inline bool linearList::ListInsert(int i, int e)
 {
     if (i < 1 && i > length)
     {
@@ -80,7 +81,7 @@ bool linearList::ListInsert(int i, int e)
     return true;
 }
 
-bool linearList::print()
+inline bool linearList::print()
 {
     if (length <= 0)
     {
@@ -98,7 +99,7 @@ bool linearList::print()
     return true;
 }
 
-int &linearList::operator[](int i)
+inline int &linearList::operator[](int i)
 {
     if (i >= length)
     {
@@ -108,7 +109,7 @@ int &linearList::operator[](int i)
     return arry[i];
 }
 
-linearList ::linearList(int a[], int len)
+inline linearList ::linearList(int a[], int len)
 {
     maxlength = ((len / 10) + 1) * 10;
     length = len;
@@ -119,7 +120,7 @@ linearList ::linearList(int a[], int len)
     }
 }
 
-linearList::linearList(int num)
+inline linearList::linearList(int num)
 {
     maxlength = (num / 10 + 1) * 10;
     length = num;
@@ -130,7 +131,7 @@ linearList::linearList(int num)
     }
 }
 
-linearList::~linearList()
+inline linearList::~linearList()
 {
     delete arry;
     // std::cout << "delete" << std::endl;
